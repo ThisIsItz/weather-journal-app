@@ -58,27 +58,6 @@ const saveData = async () => {
     data.feelings = feelings.value;
     data.temp = data.main.temp;
   }
-  
-
-  const getTemp = async () => {
-
-    const query = newZip.value;
-    // Get the first 3 characters of the zipcode entered
-    const location = getLocation(query);
-    const endpoint = url + location + queryParams + apiKey;
-    // console.log(endpoint);
-    try {
-      const response = await fetch(endpoint);
-      if(response.ok) {
-        const jsonResponse = await response.json();
-        return jsonResponse.main.temp;
-      } else {
-        throw new Error('Request denied!');
-      }
-    } catch(error) {
-      console.log(error.message);
-    }
-  }
 
 /* Function to POST data */
 
@@ -120,8 +99,3 @@ const updateUI = async () => {
         console.log("error", error);
     }
 }
-
-const clearDisplay = () => {
-    newZip.value = "";
-    feelings.value = "";
-  }
