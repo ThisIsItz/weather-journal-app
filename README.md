@@ -1,10 +1,24 @@
 # Weather-Journal App Project
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+This is my third project for Front-end Udacity Nanodegree.
+The project is about to create an asynchronous web app that uses a Web API and user data to dynamically update the UI.
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+
+
+
+
+
+## Built With
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Udacity Template] (https://github.com/udacity/fend/tree/refresh-2019/projects/weather-journal-app)
+* [OpenWeatherMap] (https://openweathermap.org/)
+
+## Authors
+
+* **Itziar Urbieta** (https://github.com/ThisIsItz)
+
+## License
+
+This project is licensed under the Udacity License
