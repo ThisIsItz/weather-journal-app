@@ -32,12 +32,12 @@ document.getElementById('generate').addEventListener('click', performAction);
 /* Function called by event listener */
 
 function performAction(e){
-    const newZip =  document.getElementById('zip').value;
+const newZip =  document.getElementById('zip').value;
 getWeather(baseURL,newZip, addApi, apiKey)
 .then(function(data){
     saveData();
+    updateUI();
 })
-.then(updateUI())
 }
 
 const getWeather = async (baseURL, newZip, addApi, apiKey)=>{
@@ -56,7 +56,22 @@ const getWeather = async (baseURL, newZip, addApi, apiKey)=>{
 const saveData = async () => {
     data.date = getDate();
     data.feelings = feelings.value;
-    data.temp = data.main.temp;
+    data.temp = await getTemp();
+  }
+  
+  const getTemp = async () => {
+
+    const zip = document.getElementById('zip').value;
+    const endpoint = baseURL + zip + addApi + apiKey;
+    try {
+      const response = await fetch(endpoint);
+      if(response.ok) {
+        const jsonResponse = await response.json();
+        return jsonResponse.main.temp;
+      }
+    } catch(error) {
+      console.log(error.message);
+    }
   }
 
 /* Function to POST data */
@@ -86,15 +101,15 @@ const postData = async (url = '/addWeather', data = {}) => {
 
 /*Function to update UI*/
 const updateUI = async () => {
-    const request = await fetch ('/all');
+    const request = await fetch ('/weatherData');
     try{
         const allData = await request.json();
         date.innerHTML = 'Today is ' + data.date;
         temp.innerHTML = data.temp + '&deg;C';
         content.innerHTML = 'Feelings: ' + data.feelings;
 
-     //   document.getElementById('zip').value = "";
-     //   document.getElementById('feelings').value = "";
+        document.getElementById('zip').value = "";
+        document.getElementById('feelings').value = "";
     } catch (error){
         console.log("error", error);
     }
