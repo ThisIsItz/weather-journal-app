@@ -1,7 +1,6 @@
 // Empty object to store current data
 const data = {};
 
-
 // Global Variables 
 const feelings = document.getElementById('feelings');
 
@@ -15,9 +14,6 @@ const getDate = () => {
     return date.toDateString();
   }
 
-
-
-
 // Personal API Key for OpenWeatherMap API
 
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
@@ -30,15 +26,6 @@ document.getElementById('generate').addEventListener('click', performAction);
 
 
 /* Function called by event listener */
-
-function performAction(e){
-const newZip =  document.getElementById('zip').value;
-getWeather(baseURL,newZip, addApi, apiKey)
-.then(function(data){
-    saveData();
-    updateUI();
-})
-}
 
 const getWeather = async (baseURL, newZip, addApi, apiKey)=>{
 
@@ -57,6 +44,7 @@ const saveData = async () => {
     data.date = getDate();
     data.feelings = feelings.value;
     data.temp = await getTemp();
+    updateUI();
   }
   
   const getTemp = async () => {
@@ -95,10 +83,6 @@ const postData = async (url = '/addWeather', data = {}) => {
     };
 };
 
-
-
-/* Function to GET Project Data */
-
 /*Function to update UI*/
 const updateUI = async () => {
     const request = await fetch ('/weatherData');
@@ -114,3 +98,9 @@ const updateUI = async () => {
         console.log("error", error);
     }
 }
+
+function performAction(e){
+  const newZip =  document.getElementById('zip').value;
+  getWeather(baseURL,newZip, addApi, apiKey)
+  saveData();
+  }
