@@ -3,24 +3,16 @@
 This is my third project for Front-end Udacity Nanodegree.
 The project is about to create an asynchronous web app that uses a Web API and user data to dynamically update the UI.
 
-<<<<<<< HEAD
 ![Weather Journal App](./img/wja.png)
 
-
-=======
-
->>>>>>> 43f39775bf47735f65d4ee049b47587d7b7a0567
 ## How to start
 
 You need to have Node.js and npm locally installed. You can check that by running `node -v && npm -v` in terminal. This should result in two versions shown in terminal.
 
 Then, you have to run `npm start` in order to run the express server locally.
 
-<<<<<<< HEAD
 Open `localhost:8000`in your browser and the app will be running.
 
-=======
->>>>>>> 43f39775bf47735f65d4ee049b47587d7b7a0567
 ## Built With
 
 * [Visual Studio Code](https://code.visualstudio.com/)
