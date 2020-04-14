@@ -41,5 +41,3 @@ app.post('/addWeather', function (req, res) {
     console.log(projectData);
     res.send('Post received');
 });
-
-
