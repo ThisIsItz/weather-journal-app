@@ -19,7 +19,3 @@ Then, you have to run `npm start` in order to run the express server locally.
 ## Authors
 
 * **Itziar Urbieta** (https://github.com/ThisIsItz)
-
-## License
-
-This project is licensed under the Udacity License
