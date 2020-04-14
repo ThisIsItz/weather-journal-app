@@ -4,7 +4,6 @@ const data = {};
 // Global Variables 
 const feelings = document.getElementById('feelings');
 
-
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
@@ -48,7 +47,6 @@ const saveData = async () => {
   }
   
   const getTemp = async () => {
-
     const zip = document.getElementById('zip').value;
     const endpoint = baseURL + zip + addApi + apiKey;
     try {
