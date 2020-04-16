@@ -90,6 +90,7 @@ const updateUI = async () => {
         temp.innerHTML = data.temp + '&deg;C';
         content.innerHTML = 'Feelings: ' + data.feelings;
 
+        document.getElementById("entryHolder").style.display = "block"
         document.getElementById('zip').value = "";
         document.getElementById('feelings').value = "";
     } catch (error){

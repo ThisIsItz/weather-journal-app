@@ -22,14 +22,11 @@ body{
     text-align: center;
 }
 
-.entry{
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-
 #entryHolder{
     font-size: 30px;
+    margin-bottom: 20px;
+    display: none;
+    text-align: center;
 }
 
 #date{
@@ -86,9 +83,9 @@ button{
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
-    margin-top: 20px;
     margin: auto;
     margin-top: 10px !important;
+    margin-bottom: 20px !important;
 }
 h1{
     font-size: 36px;
