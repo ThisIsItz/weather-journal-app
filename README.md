@@ -1,7 +1,6 @@
 # Weather App Project
 
-This is my third project for Front-end Udacity Nanodegree.
-The project is about to create an asynchronous web app that uses a Web API and user data to dynamically update the UI.
+This is my third project for Front-end Udacity Nanodegree. This project is about to create an asynchronous web app that uses Web API and user data to dynamically update the UI with weather data and their provided response in text field. Udacity only allows me to use the OpenWeatherMap API, so it only works with zip codes from UE and Canada.
 
 ![Weather App](./img/wja.png)
 
